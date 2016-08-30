@@ -1,0 +1,8 @@
+To run NChat you need to install node.js on your server.
+- Open console
+- go into the nchat directory
+- type npm install
+
+After successful installation just run in the nchat directory node server.js and connect to yourdomain:8080
+
+You can change the port in the config.json
