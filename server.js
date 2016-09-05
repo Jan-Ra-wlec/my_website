@@ -16,7 +16,7 @@ server.listen(conf.port);
 // wenn der Pfad / aufgerufen wird
 app.get('/', function (req, res) {
 	// so wird die Datei index.html ausgegeben
-	res.sendFile(__dirname + '/public/index.html');
+	res.sendFile(__dirname + '/public/chat.html');
 });
 
 // Websocket
