@@ -10,13 +10,13 @@ server.listen(conf.port);
 
 //app.configure(function(){
 	// statische Dateien ausliefern
-	app.use(express.static(__dirname + '/public'));
+	//app.use(express.static(__dirname + ''));
 //});
 
 // wenn der Pfad / aufgerufen wird
 app.get('/', function (req, res) {
 	// so wird die Datei index.html ausgegeben
-	res.sendFile(__dirname + '/public/chat.html');
+	res.sendFile(__dirname + '/chat.html');
 });
 
 // Websocket

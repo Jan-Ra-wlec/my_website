@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DJayKay.net | Blog</title>
+    <title>DJayKay.net | Chat</title>
+			<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css" />
+		<script src="socket.io/socket.io.js"></script>
+		<script src="jquery.min.js"></script>
+		<script src="client.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -68,7 +73,20 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div><iframe src="public/chat.html" frameborder="0" scrolling="auto" height="800" width="100%" ></iframe></div>
+<div>
+<ul id="content"></ul>
+  <div class="alert alert-danger <!--alert-dismissible-->" role="alert">
+  <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+Der Chat hat derzeit keine Funktion! <br>
+Funktionalitäten spezieller Anwendungen wird erst in den nächsten Wochen hinzu gefügt!<br>
+Bitte habt noch Geduld</p></div>
+		<footer>
+			<input id="name" type="text" placeholder="Benutzername" />
+			<input id="text" type="text" placeholder="Nachricht" />
+			<input id="senden" type="submit" class="btn" value="Senden" />
+		</footer>
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
