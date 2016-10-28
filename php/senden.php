@@ -1,5 +1,5 @@
 <?php
-$empfaenger = "webmaster@beispiel.de"; //Hier die E-Mail
+$empfaenger = "tsreg@djaykay.net"; //Hier die E-Mail
 $absendername = "Kontaktformular";
 $absendermail = $_POST['email'];
 $betreff = "Neue Anfrage";
