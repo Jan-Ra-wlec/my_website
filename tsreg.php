@@ -75,52 +75,15 @@
   <span class="help-block">Kann nach der Registrierung geändert werden!</span>  
   </div>
 </div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput"></label>  
-  <div class="col-md-4">
-  <input id="tsid" name="textinput" type="text" placeholder="TeamSpeak³ Identität" class="form-control input-md" required="">
-  <span class="help-block">Deine Teamspeak Identitätsnummer kannst du im Teamspeak³ Client finden. Solltest du Probleme haben, kontaktiere einen Admin</span>  
-  </div>
-</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="submit"></label>
-  <div class="col-md-4">
-  <button id="submit" name="submit" class="btn btn-success">Registrierung abschließen!</button>
-  </div>
-</div>
-
-</fieldset>
-</form>
 <!-- Formular Beginn -->
 
             <form role="form" id="frmContact">
-                <div class="form-group" id="frmGrpVorname">
-                    <label for="vorname" class="control-label">Vorname</label>
-                    <input type="text" id="vorname" class="form-control" placeholder="Ihr Vorname">
+                <div class="form-group" id="frmGrpID">
+                    <label for="vorname" class="control-label">Teamspeak ID</label>
+                    <input type="text" id="vorname" class="form-control" placeholder="Ihre TS³ ID">
                 </div>
-                <div class="form-group" id="frmGrpNachname">
-                    <label for="nachname" class="control-label">Nachname</label>
-                    <input type="text" id="nachname" class="form-control" placeholder="Ihr Nachname">
-                </div>
-                <div class="form-group" id="frmGrpEmail">
-                    <label for="email" class="control-label">E-Mail Adresse</label>
-                    <input type="text" id="email" class="form-control"  placeholder="Ihre E-Mail Adresse">
-                </div>
-                <div class="form-group" id="frmGrpNachricht">
-                    <label for="nachricht" class="control-label">Nachricht</label>
-                    <textarea id="nachricht" class="form-control">Ihre Nachricht an uns...</textarea>
-                </div>
-                <div class="form-group" id="frmGrpCaptcha">
-                    <label for="captcha" class="control-label">Wie viel ist "2 + 3"?</label>
-                    <input type="text" id="captcha" class="form-control" placeholder="Ergebnis der o.g. Rechenaufgabe">
-                </div>
-
                 <div class="form-group text-right">
-                    <button type="submit" id="submitBtn" class="btn btn-primary btn-lg">Absenden</button>
+                    <button type="submit" id="submitBtn" class="btn btn-success">Absenden</button>
                 </div>
             </form>
 
@@ -138,52 +101,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
-    function validateEmail(email) {
-        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-    }
-
     $( '#frmContact').submit( function() {
         var formControl = true;
 
-        $( '#frmGrpVorname' ).removeClass( 'has-error' );
-        $( '#frmGrpNachname' ).removeClass( 'has-error' );
-        $( '#frmGrpEmail' ).removeClass( 'has-error' );
-        $( '#frmGrpNachricht' ).removeClass( 'has-error' );
-        $( '#frmGrpCaptcha' ).removeClass( 'has-error' );
-
-
+        $( '#frmGrpID' ).removeClass( 'has-error' );
+		
         var vorname = $( '#vorname' );
-        var nachname = $( '#nachname' );
-        var email = $( '#email' );
-        var nachricht = $( '#nachricht' );
-        var captcha = $( '#captcha' );
 
         if(vorname.val() == '') {
             formControl = false;
             $( '#frmGrpVorname' ).addClass( 'has-error' );
         }
-
-        if(nachname.val() == '') {
-            formControl = false;
-            $( '#frmGrpNachname' ).addClass( 'has-error' );
-        }
-
-        if(nachricht.val() == '') {
-            formControl = false;
-            $( '#frmGrpNachricht' ).addClass( 'has-error' );
-        }
-
-        if(validateEmail(email.val()) == false) {
-            formControl = false;
-            $( '#frmGrpEmail' ).addClass( 'has-error' );
-        }
-
-        if(captcha.val() != '5') {
-            formControl = false;
-            $( '#frmGrpCaptcha' ).addClass( 'has-error' );
-        }
-
+		
         if(formControl) {
             $.ajax({
                 type: "POST",
@@ -199,14 +128,6 @@
         return false;
     } );
 </script>
- <div class="alert alert-success">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
-  <span class="sr-only">Success!</span>
-<strong>Deine Registrierung wurde versendet!</strong><br>
-Bis dein Account freigeschaltet wird, kann es ein wenig dauern!</p>
-</div>
-</div>
 	        <div class="col-xs-6 col-lg-4">
 <?PHP include 'sidebar/contact.php';?>
       </div>
