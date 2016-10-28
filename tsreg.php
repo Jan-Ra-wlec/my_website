@@ -85,12 +85,15 @@
     </div>
 
 </div><!-- /.container -->
-
+	        <div class="col-xs-6 col-lg-4">
+<?PHP include 'sidebar/contact.php';?>
+      </div>
+<?PHP include 'footer.php';?>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
     $( '#frmContact').submit( function() {
@@ -120,7 +123,3 @@
         return false;
     } );
 </script>
-	        <div class="col-xs-6 col-lg-4">
-<?PHP include 'sidebar/contact.php';?>
-      </div>
-<?PHP include 'footer.php';?>
