@@ -187,7 +187,7 @@
         if(formControl) {
             $.ajax({
                 type: "POST",
-                url: "php/senden.php",
+                url: "senden.php",
                 data: { keyword:vorname }
             }).done(function(msg) {
                 $( '#message' ).addClass( 'alert' );
