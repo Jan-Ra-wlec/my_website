@@ -1,0 +1,145 @@
+﻿<?php include 'header.php'; ?>
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DJayKay.net | TS³ Registrierung</title>
+			<meta charset="utf-8">
+		<script src="socket.io/socket.io.js"></script>
+		<script src="jquery.min.js"></script>
+		<script src="client.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+     <div class="container">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Navigation Anzeigen</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">DJayKay.net</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="blog.php">Blog</a></li>
+		<li><a href="chat.php">Chat</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="active"><a href="tsreg.html">Teamspeak Registrierung <span class="sr-only">(current)</span></a></li>
+            <li><a href="tsreg.php">Serverliste</a></li>
+            <li><a href="#">Technik</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Spenden</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Teammitglied werden</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!--<form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Suchen sie was?">
+        </div>
+        <button type="submit" class="btn btn-default">Suchen</button>
+      </form>-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Login</a></li>
+            <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menü <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Webinterface</a></li>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#">Einstellungen</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Abmelden</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div>
+<div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-8" style="border-right: 1px solid #ccc;">
+<ul id="content"></ul>
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Teamspeak³ Registrierung</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput"></label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="Benutzername im Teamspeak³" class="form-control input-md" required="">
+  <span class="help-block">Kann nach der Registrierung geändert werden!</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput"></label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="TeamSpeak³ Identität" class="form-control input-md" required="">
+  <span class="help-block">Deine Teamspeak Identitätsnummer kannst du im Teamspeak³ Client finden. Solltest du Probleme haben, kontaktiere einen Admin</span>  
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+  <button id="submit" name="submit" class="btn btn-success">Registrierung abschließen!</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+ <div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+  <span class="sr-only">Success!</span>
+<strong>Deine Registrierung wurde versendet!</strong><br>
+Bis dein Account freigeschaltet wird, kann es ein wenig dauern!</p>
+</div>
+</div>
+	        <div class="col-xs-6 col-lg-4">
+  <div class="alert alert-danger" role="alert">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+<p>Wie bist du hier her gekommen?<p><br>
+GEH! Hier gibts nichts zu sehen!</p>
+</div>
+</div>
+      </div>
+		<footer class="footer">
+		<div class="container">
+			<div align="center">
+			<p class="text-muted"><a href="impressum.html">Impressum</a> | <a href="disclaimer.html">Disclaimer</a><br>
+			© 2016 Jannis Radke</p>
+			</div>
+			</div>
+	</footer>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

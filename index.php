@@ -1,26 +1,10 @@
-﻿<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>DJayKay.net | Blog</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+<?php include 'header.php'; ?>
+    <title>DJayKay.net | Programming and Media</title>
+	</head>
   <body>
     <div class="container">
-   <nav class="navbar navbar-inverse"> <!-- navbar-fixed-top-->
-  <div class="container-fluid">
+ <nav class="navbar navbar-inverse"> <!-- navbar-fixed-top-->
+  <!--<div class="container-fluid">-->
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -35,11 +19,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-		<li class="active"><a href="blog.html">Blog <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
+		<li><a href="blog.php">Blog</a></li>
+		<li><a href="chat.php">Chat</a></li>
         <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="tsreg.html">Teamspeak Registrierung</a></li>
+            <li><a href="tsreg.php">Teamspeak Registrierung</a></li>
             <li><a href="#">Serverliste</a></li>
             <li><a href="#">Technik</a></li>
             <li role="separator" class="divider"></li>
@@ -63,7 +48,7 @@
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+  <!--</div><!-- /.container-fluid -->
 </nav>
 <div class="row">
         <div class="col-xs-12 col-sm-6 col-lg-8" style="border-right: 1px solid #ccc;">
@@ -76,7 +61,13 @@
   <span class="sr-only">Error:</span>
     Unsere Website wird komplett erneuert!<br>
 	Bitte habt noch Geduld. Es steht noch kein Datum für den Release fest!<br><br>
-	DJayKay.net Dev-Center</p></div>
+	DJayKay.net Dev-Center</p></div><br>
+	Fertigstellungsprozess:<br>
+<div class="progress">
+  <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%">
+    <span class="sr-only">12% Complete (success)</span>
+  </div>
+</div>
 </p>
   <p><a class="btn btn-primary btn-lg" href="http://djaykay.net/" role="button">Zur alten Ansicht!</a></p>
 </div>
@@ -91,7 +82,7 @@
 		<div class="container">
 			<div align="center">
 			<p class="text-muted"><a href="impressum.html">Impressum</a> | <a href="disclaimer.html">Disclaimer</a><br>
-© 2016 Jannis Radke</p>
+			© 2016 Jannis Radke</p>
 			</div>
 			</div>
 	</footer>

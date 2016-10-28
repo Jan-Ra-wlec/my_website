@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<?php include 'header.php'; ?>
+<!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="utf-8"/>
@@ -36,13 +37,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="blog.php">Blog</a></li>
 		<li class="active"><a href="chat.html">Chat <span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="tsreg.html">Teamspeak Registrierung</a></li>
+            <li><a href="tsreg.php">Teamspeak Registrierung</a></li>
             <li><a href="#">Serverliste</a></li>
             <li><a href="#">Technik</a></li>
             <li role="separator" class="divider"></li>
@@ -101,7 +102,7 @@ GEH! Hier gibts nichts zu sehen!</p>
 		<div class="container">
 			<div align="center">
 			<p class="text-muted"><a href="impressum.html">Impressum</a> | <a href="disclaimer.html">Disclaimer</a><br>
-© 2016 Jannis Radke</p>
+			© 2016 Jannis Radke</p>
 			</div>
 			</div>
 	</footer>

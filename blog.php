@@ -1,25 +1,26 @@
-﻿<!DOCTYPE html>
+﻿<?php include 'header.php'; ?>
+<!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DJayKay.net | TS³ Registrierung</title>
-			<meta charset="utf-8">
-		<script src="socket.io/socket.io.js"></script>
-		<script src="jquery.min.js"></script>
-		<script src="client.js"></script>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DJayKay.net | Blog</title>
+
+    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
   </head>
   <body>
-     <div class="container">
-  <nav class="navbar navbar-inverse">
+    <div class="container">
+   <nav class="navbar navbar-inverse"> <!-- navbar-fixed-top-->
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -29,19 +30,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">DJayKay.net</a>
+      <!--<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo.png" height= 32px/></a>-->
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-		<li><a href="chat.html">Chat</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server <span class="caret"></span></a>
+        <li><a href="index.php">Home</a></li>
+		<li class="active"><a href="blog.html">Blog <span class="sr-only">(current)</span></a></li>
+		<li><a href="chat.php">Chat</a></li>
+        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li class="active"><a href="tsreg.html">Teamspeak Registrierung <span class="sr-only">(current)</span></a></li>
+            <li><a href="tsreg.php">Teamspeak Registrierung</a></li>
             <li><a href="#">Serverliste</a></li>
             <li><a href="#">Technik</a></li>
             <li role="separator" class="divider"></li>
@@ -51,12 +51,6 @@
           </ul>
         </li>
       </ul>
-      <!--<form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Suchen sie was?">
-        </div>
-        <button type="submit" class="btn btn-default">Suchen</button>
-      </form>-->
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Login</a></li>
             <li class="dropdown">
@@ -73,72 +67,43 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div>
 <div class="row">
         <div class="col-xs-12 col-sm-6 col-lg-8" style="border-right: 1px solid #ccc;">
-<ul id="content"></ul>
-<form class="form-horizontal">
-<fieldset>
-
-<!-- Form Name -->
-<legend>Teamspeak³ Registrierung</legend>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput"></label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="Benutzername im Teamspeak³" class="form-control input-md" required="">
-  <span class="help-block">Kann nach der Registrierung geändert werden!</span>  
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput"></label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="TeamSpeak³ Identität" class="form-control input-md" required="">
-  <span class="help-block">Deine Teamspeak Identitätsnummer kannst du im Teamspeak³ Client finden. Solltest du Probleme haben, kontaktiere einen Admin</span>  
-  </div>
-</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="submit"></label>
-  <div class="col-md-4">
-  <button id="submit" name="submit" class="btn btn-success">Registrierung abschließen!</button>
-  </div>
-</div>
-
-</fieldset>
-</form>
- <div class="alert alert-success">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
-  <span class="sr-only">Success!</span>
-<strong>Deine Registrierung wurde versendet!</strong><br>
-Bis dein Account freigeschaltet wird, kann es ein wenig dauern!</p>
+<div class="jumbotron">
+  <h1>Umbauarbeiten</h1>
+  <p>Programmer - Kind of BIOS - A Device, which turns #C0FFEE into Code. Input = C0FFEE Output = Code</p><br>
+  <div class="alert alert-danger" role="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+    Unsere Website wird komplett erneuert!<br>
+	Bitte habt noch Geduld. Es steht noch kein Datum für den Release fest!<br><br>
+	DJayKay.net Dev-Center</p></div>
+</p>
+  <p><a class="btn btn-primary btn-lg" href="http://djaykay.net/" role="button">Zur alten Ansicht!</a></p>
 </div>
 </div>
 	        <div class="col-xs-6 col-lg-4">
-  <div class="alert alert-danger" role="alert">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
-  <span class="sr-only">Error:</span>
-<p>Wie bist du hier her gekommen?<p><br>
-GEH! Hier gibts nichts zu sehen!</p>
-</div>
-</div>
+			<p>Dies ist die Seitenspalte.<br>
+			In der Seitenspalte können z.B. Kontaktdaten oder weitere Links angezeigt werden.<br><br>
+			Auch YouTube Videos könnten eingebaut werden.</p>
+			</div>
       </div>
 		<footer class="footer">
 		<div class="container">
 			<div align="center">
 			<p class="text-muted"><a href="impressum.html">Impressum</a> | <a href="disclaimer.html">Disclaimer</a><br>
-© 2016 Jannis Radke</p>
+			© 2016 Jannis Radke</p>
 			</div>
 			</div>
 	</footer>
 	</div>
+
+<!--This place for the RocketChat LiveChat Addon so long N-Chat isn't working-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
   </body>
 </html>
