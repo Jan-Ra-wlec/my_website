@@ -2,6 +2,7 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DJayKay.net | Chat</title>
@@ -19,6 +20,7 @@
 
   </head>
   <body>
+     <div class="container">
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -35,7 +37,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home <span class="sr-only"></span></a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="blog.html">Blog</a></li>
 		<li class="active"><a href="chat.html">Chat <span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
@@ -73,19 +75,30 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div>
+<div><div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-8" style="border-right: 1px solid #ccc;">
 <ul id="content"></ul>
   <div class="alert alert-danger <!--alert-dismissible-->" role="alert">
   <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
   <span class="sr-only">Error:</span>
 Der Chat hat derzeit keine Funktion! <br>
 Funktionalitäten spezieller Anwendungen wird erst in den nächsten Wochen hinzu gefügt!<br>
-Bitte habt noch Geduld</p></div>
-		<footer>
-			<input id="name" type="text" placeholder="Benutzername" />
-			<input id="text" type="text" placeholder="Nachricht" />
-			<input id="senden" type="submit" class="btn" value="Senden" />
-		</footer>
+Bitte habt noch Geduld</p></div></div>
+	        <div class="col-xs-6 col-lg-4">
+			<p>Dies ist die Seitenspalte.<br>
+			In der Seitenspalte können z.B. Kontaktdaten oder weitere Links angezeigt werden.<br><br>
+			Auch YouTube Videos könnten eingebaut werden.</p>
+      			</div>
+      </div>
+		<footer class="footer">
+		<div class="container">
+			<div align="center">
+			<p class="text-muted"><a href="impressum.html">Impressum</a> | <a href="disclaimer.html">Disclaimer</a><br>
+© 2016 Jannis Radke</p>
+			</div>
+			</div>
+	</footer>
+	</div>
 </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
