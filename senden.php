@@ -1,8 +1,8 @@
-<?php include 'http://djaykay.net/header.php';
-$empfaenger = "tsreg@djaykay.net"; //Hier die E-Mail
-$absendername = "Kontaktformular";
+<?php include 'header.php';
+$empfaenger = "info@djaykay.net"; //Hier die E-Mail
+$absendername = "DJayKay.network";
 $absendermail = $_POST['email'];
-$betreff = "Neue Anfrage";
+$betreff = "Neue TS Aktivierungsanfrage";
 $text = "
      Vorname: ".$_POST['vorname']."\n
      Nachname: ".$_POST['nachname']."\n
