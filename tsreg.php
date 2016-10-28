@@ -74,7 +74,7 @@
                     <label for="vorname" class="control-label">Teamspeak ID</label>
                     <input type="text" id="vorname" class="form-control" placeholder="Ihre TS³ ID">
                 </div>
-                <div class="form-group text-right">
+                <div class="form-group text-center">
                     <button type="submit" id="submitBtn" class="btn btn-success">Absenden</button>
                 </div>
             </form>
