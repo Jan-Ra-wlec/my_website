@@ -1,22 +1,5 @@
 ﻿<?php include 'header.php'; ?>
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>DJayKay.net | Blog</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body>
     <div class="container">
@@ -84,26 +67,7 @@
 </div>
 </div>
 	        <div class="col-xs-6 col-lg-4">
-			<p>Dies ist die Seitenspalte.<br>
-			In der Seitenspalte können z.B. Kontaktdaten oder weitere Links angezeigt werden.<br><br>
-			Auch YouTube Videos könnten eingebaut werden.</p>
+<?PHP include 'sidebar/sample.php';?>
 			</div>
       </div>
-		<footer class="footer">
-		<div class="container">
-			<div align="center">
-			<p class="text-muted"><a href="impressum.html">Impressum</a> | <a href="disclaimer.html">Disclaimer</a><br>
-			© 2016 Jannis Radke</p>
-			</div>
-			</div>
-	</footer>
-	</div>
-
-<!--This place for the RocketChat LiveChat Addon so long N-Chat isn't working-->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.js"></script>
-  </body>
-</html>
+<?PHP include 'footer.php';?>

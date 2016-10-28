@@ -1,23 +1,5 @@
 ﻿<?php include 'header.php'; ?>
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8"/>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DJayKay.net | Chat</title>
-			<meta charset="utf-8">
-		<script src="socket.io/socket.io.js"></script>
-		<script src="jquery.min.js"></script>
-		<script src="client.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+<title>DJayKay.net | Chat</title>
   </head>
   <body>
      <div class="container">
@@ -87,28 +69,8 @@ GEH! Hier gibts nichts zu sehen!</p>
 </div>
 </div>
 	        <div class="col-xs-6 col-lg-4">
-  <div class="alert alert-danger" role="alert">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
-  <span class="sr-only">Error:</span>
-<p>Wie bist du hier her gekommen?<p><br>
-GEH! Hier gibts nichts zu sehen!</p>
-</div>
-</div>
+  <?PHP include 'sidebar/contact.php';?>
      </div>
       </div>
 	  <div>
-		<footer class="footer">
-		<div class="container">
-			<div align="center">
-			<p class="text-muted"><a href="impressum.html">Impressum</a> | <a href="disclaimer.html">Disclaimer</a><br>
-			© 2016 Jannis Radke</p>
-			</div>
-			</div>
-	</footer>
-	</div>
-</div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+<?PHP include 'footer.php';?>
