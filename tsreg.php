@@ -71,7 +71,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput"></label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="Benutzername im Teamspeak³" class="form-control input-md" required="">
+  <input id="name" name="textinput" type="text" placeholder="Benutzername im Teamspeak³" class="form-control input-md" required="">
   <span class="help-block">Kann nach der Registrierung geändert werden!</span>  
   </div>
 </div>
@@ -80,7 +80,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput"></label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="TeamSpeak³ Identität" class="form-control input-md" required="">
+  <input id="tsid" name="textinput" type="text" placeholder="TeamSpeak³ Identität" class="form-control input-md" required="">
   <span class="help-block">Deine Teamspeak Identitätsnummer kannst du im Teamspeak³ Client finden. Solltest du Probleme haben, kontaktiere einen Admin</span>  
   </div>
 </div>
@@ -95,6 +95,13 @@
 
 </fieldset>
 </form>
+<script>
+     $( '#frmContact').submit( function() {
+          var formControl = true;
+          alert( 'Test!' ); <!-- Nur zum Testen -->
+          return false;
+     } );
+</script>
  <div class="alert alert-success">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
