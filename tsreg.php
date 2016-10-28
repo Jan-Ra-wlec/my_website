@@ -95,12 +95,109 @@
 
 </fieldset>
 </form>
+<!-- Formular Beginn -->
+
+            <form role="form" id="frmContact">
+                <div class="form-group" id="frmGrpVorname">
+                    <label for="vorname" class="control-label">Vorname</label>
+                    <input type="text" id="vorname" class="form-control" placeholder="Ihr Vorname">
+                </div>
+                <div class="form-group" id="frmGrpNachname">
+                    <label for="nachname" class="control-label">Nachname</label>
+                    <input type="text" id="nachname" class="form-control" placeholder="Ihr Nachname">
+                </div>
+                <div class="form-group" id="frmGrpEmail">
+                    <label for="email" class="control-label">E-Mail Adresse</label>
+                    <input type="text" id="email" class="form-control"  placeholder="Ihre E-Mail Adresse">
+                </div>
+                <div class="form-group" id="frmGrpNachricht">
+                    <label for="nachricht" class="control-label">Nachricht</label>
+                    <textarea id="nachricht" class="form-control">Ihre Nachricht an uns...</textarea>
+                </div>
+                <div class="form-group" id="frmGrpCaptcha">
+                    <label for="captcha" class="control-label">Wie viel ist "2 + 3"?</label>
+                    <input type="text" id="captcha" class="form-control" placeholder="Ergebnis der o.g. Rechenaufgabe">
+                </div>
+
+                <div class="form-group text-right">
+                    <button type="submit" id="submitBtn" class="btn btn-primary btn-lg">Absenden</button>
+                </div>
+            </form>
+
+            <!-- Formular Ende -->
+
+        </div>
+    </div>
+
+</div><!-- /.container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script>
-     $( '#frmContact').submit( function() {
-          var formControl = true;
-          alert( 'Test!' ); <!-- Nur zum Testen -->
-          return false;
-     } );
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    $( '#frmContact').submit( function() {
+        var formControl = true;
+
+        $( '#frmGrpVorname' ).removeClass( 'has-error' );
+        $( '#frmGrpNachname' ).removeClass( 'has-error' );
+        $( '#frmGrpEmail' ).removeClass( 'has-error' );
+        $( '#frmGrpNachricht' ).removeClass( 'has-error' );
+        $( '#frmGrpCaptcha' ).removeClass( 'has-error' );
+
+
+        var vorname = $( '#vorname' );
+        var nachname = $( '#nachname' );
+        var email = $( '#email' );
+        var nachricht = $( '#nachricht' );
+        var captcha = $( '#captcha' );
+
+        if(vorname.val() == '') {
+            formControl = false;
+            $( '#frmGrpVorname' ).addClass( 'has-error' );
+        }
+
+        if(nachname.val() == '') {
+            formControl = false;
+            $( '#frmGrpNachname' ).addClass( 'has-error' );
+        }
+
+        if(nachricht.val() == '') {
+            formControl = false;
+            $( '#frmGrpNachricht' ).addClass( 'has-error' );
+        }
+
+        if(validateEmail(email.val()) == false) {
+            formControl = false;
+            $( '#frmGrpEmail' ).addClass( 'has-error' );
+        }
+
+        if(captcha.val() != '5') {
+            formControl = false;
+            $( '#frmGrpCaptcha' ).addClass( 'has-error' );
+        }
+
+        if(formControl) {
+            $.ajax({
+                type: "POST",
+                url: "php/senden.php",
+                data: { keyword:vorname }
+            }).done(function(msg) {
+                $( '#message' ).addClass( 'alert' );
+                $( '#message' ).addClass( 'alert-success' );
+                $( '#message').html( msg );
+            });
+        }
+
+        return false;
+    } );
 </script>
  <div class="alert alert-success">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
