@@ -67,14 +67,6 @@
 <!-- Form Name -->
 <legend>Teamspeak³ Registrierung</legend>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput"></label>  
-  <div class="col-md-4">
-  <input id="name" name="textinput" type="text" placeholder="Benutzername im Teamspeak³" class="form-control input-md" required="">
-  <span class="help-block">Kann nach der Registrierung geändert werden!</span>  
-  </div>
-</div>
 <!-- Formular Beginn -->
 
             <form role="form" id="frmContact">
