@@ -93,8 +93,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.min.js"></script>
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=1.9.1'></script>
+<script src="js/bootstrap.min.js"></script>
 <script>
     $( '#frmContact').submit( function() {
         var formControl = true;
