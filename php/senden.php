@@ -10,5 +10,11 @@ $text = "
      Nachricht: ".$_POST['nachricht']."\n";
 mail($empfaenger, $betreff, $text, "From: $absendername <$absendermail>");
 
-echo("Das Formular wurde erfolgreich versendet");
+echo(<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+  <span class="sr-only">Success!</span>
+<strong>Deine Registrierung wurde versendet!</strong><br>
+Bis dein Account freigeschaltet wird, kann es ein wenig dauern!</p>
+</div>);
 ?>
